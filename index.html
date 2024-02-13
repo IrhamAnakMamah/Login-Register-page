@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Register Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="mainpage">
+    <div class="login form">
+      <header>Login</header>
+      <form action="#">
+      <input type="text" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <div class="checkbox">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember Me</label>
+      </div>
+      <a href="#">Forget Password?</a>
+      <input type="submit" value="Sign in" class="button">
+      </form>
+    </div>
+    
+    <div class="register form">
+      <header>Create Account</header>
+      <form action="#">
+      <input type="text" placeholder="Full name" required>
+      <input type="text" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      
+      <input type="submit" value="Sign up" class="button">
+      </form>
+    </div>
+
+    <script>
+      const mainpage = document.querySelector(".mainpage"),
+      registerHeader = document.querySelector(".register header"),
+      loginHeader = document.querySelector(".login header");
+
+      registerHeader.addEventListener("click", () => {
+        mainpage.classList.add("active");
+      });
+      loginHeader.addEventListener("click", () => {
+        mainpage.classList.remove("active");
+      });
+    </script>
+  </section>
+</body>
+</html>
